@@ -1,0 +1,16 @@
+	Guest		ResID	Room	Date Out
+
+	Chakfeh		3200	300	17-Aug-2023
+	Chakfeh		3201	312	17-Aug-2023
+	Saab		2548	410	17-Aug-2023
+
+	Ansari		3172	100	18-Aug-2023
+	Michael		3152	208	18-Aug-2023
+	[Mv]Gomah	3196	310	18-Aug-2023
+	Powell		2721	402	18-Aug-2023
+	Lenehan		2719	404	18-Aug-2023
+	Barcikoski	3187	412	18-Aug-2023
+
+	Witte		2526	302	19-Aug-2023
+
+	Ackley		2091	210	20-Aug-2023
