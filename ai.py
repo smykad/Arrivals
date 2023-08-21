@@ -1,6 +1,6 @@
 import pandas as pd
 import csv
-
+import os
 
 # Method for string manipulation to adjust number of tabs based on length of last name
 
@@ -81,13 +81,13 @@ def myData(myFile):
 
             for row in reader:
                 try:
-                    if "WUERFEL" in row[0]:
+                    if "WUERFEL" in row[0]: # added this line of code for when rooms aren't meant to be rented out
                         pass
                     else:
                         name = row[0]
                         resId = int(row[1])
                         dateOut = row[2]
-                        if int(row[3]) < 5:
+                        if int(row[3]) < 5: # a fix for when the csv file is 2 pages or more 
                             room = int(row[4])
                         else:
                             room = int(row[3])
@@ -111,6 +111,7 @@ def main():
     myDataFile = 'data/myData.csv'
     lastNames, resIDs, dateOuts, rooms = myData(myDataFile)
     createFile(lastNames, resIDs, rooms, dateOuts)
+    os.startfile("data/arrivals.txt", "print")
 
 
 main()
