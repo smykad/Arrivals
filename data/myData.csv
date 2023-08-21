@@ -1,25 +1,44 @@
-Guest,Res. ID,Date Out,Room
-"Chakfeh, Eyas",3200,17-Aug-2023,300    
-"Chakfeh, Eyas",3201,17-Aug-2023,312    
-"Saab, Mahdi ",2548,17-Aug-2023,410    
-"Ansari, Mohammed",3172,18-Aug-2023,100    
-"Michael, David",3152,18-Aug-2023,208    
-"[MV]Gomah, Hassan",3196,18-Aug-2023,310    
-"Powell, Samantha",2721,18-Aug-2023,402    
-"Lenehan, Brian",2719,18-Aug-2023,404    
-"Barcikoski, Susan",3187,18-Aug-2023,412    
-"Witte, Judith",2526,19-Aug-2023,302    
-"Ackley, Brenda",2091,20-Aug-2023,210    
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
+Guest,Res. ID,Date Out,Rate,Room
+"Semrick, Kathy",2904,8/22/2023,0,102    
+"WUERFEL {SAVE}, SAVE",3065,8/22/2023,407    ,$300.00
+"Palazzolo, Patricia",3131,8/22/2023,0,208    
+"Schwegel, Lauri",3274,8/22/2023,0,304    
+"WUERFEL {SAVE}, SAVE",3066,8/22/2023,0,405    
+"Jaini, Paresh",2951,8/22/2023,0,307    
+"WUERFEL {SAVE}, SAVE",3064,8/22/2023,408    ,$350.00
+"WUERFEL {SAVE}, SAVE",3063,8/22/2023,0,400    
+"Arnous, Yasser",3197,8/23/2023,0,112    
+"arnous, Lilian",3198,8/23/2023,0,200    
+"HULETT, JAMES",2976,8/23/2023,0,212    
+"Morinaga, Yuta",3190,8/23/2023,1,300    
+"Wilberding, Joseph",3120,8/23/2023,0,310    
+"MacDonald, Christian",2924,8/23/2023,0,402    
+"bloch, jackie",3165,8/23/2023,0,404    
+"Christlieb , Cynthia",2922,8/24/2023,0,308    
+"Blazer, Joseph",3015,8/24/2023,410    ,$350.00
+"LAWLESS, EMILY",2701,8/25/2023,406    ,$360.00
+"Christianson, Eric",2927,8/25/2023,0,202    
+"Sedlacek, Bonnie",2406,8/25/2023,0,306    
+Guest,Res. ID,Date Out,Room,Rate
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

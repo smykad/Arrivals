@@ -5,12 +5,13 @@ import csv
 # Method for string manipulation to adjust number of tabs based on length of last name
 
 def myStringManipulation(myList1, myList2, myList3, myList4, i, f):
-    
     # get the length of guests last name
     if len(myList1[i]) > 7:
         f.write(f'\t{myList1[i]}\t{myList2[i]}\t{myList3[i]}\t{myList4[i]}\n')
+
     else:
         f.write(f'\t{myList1[i]}\t\t{myList2[i]}\t{myList3[i]}\t{myList4[i]}\n')
+
 
 # Method to separate first and last names            
 def myNames(myList, myInt):
@@ -24,19 +25,20 @@ def myNames(myList, myInt):
 # Method to write data to file
 def myRooms(myList1, myList2, myList3, myList4, f):
     """Method to write data to text file."""
-    if len(myList1) > 0:
-        f.write(f'\tGuest\t\tResID\tRoom\tDate Out\n\n')
-        for i in range(len(myList1)):
+    num = len(myList1)
+    f.write(f'\t\tNumber of Arrivals: {num}\n\n')
+    f.write(f'\tGuest\t\tResID\tRoom\tDate Out\n\n')
+    for i in range(len(myList1)):
             
             # if i > 0 and i % 5 == 0: // This code is to designate dividing rooms up into blocks of 5
             # // Not using it becuase I want to seperate by date
             
             # Puts a blank line between groups of dates
-            if myList4[i] > myList4[i-1]:
-                f.write('\n')
-                myStringManipulation(myList1, myList2, myList3, myList4, i, f)
-            else:
-                myStringManipulation(myList1, myList2, myList3, myList4, i, f)
+        if myList4[i] > myList4[i-1]:
+            f.write('\n')
+            myStringManipulation(myList1, myList2, myList3, myList4, i, f)
+        else:
+            myStringManipulation(myList1, myList2, myList3, myList4, i, f)
                 
 def pandaMagic():
     # Setting the data frame from the csv file 
@@ -52,7 +54,7 @@ def pandaMagic():
     df2.iloc[::2]
 
     # List of unnecessary columns
-    headers = ['Unnamed: 0', 'Unnamed: 2', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10',  
+    headers = ['Unnamed: 0', 'Unnamed: 2', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 8', 'Unnamed: 9',  
         'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Alexandra Inn']
 
     # Remove unnecessary columns
@@ -63,7 +65,7 @@ def pandaMagic():
     df2.sort_values(by='Unnamed: 7', inplace = True)
 
     # Insert a row at the top with new header names for when we read it in again as a new file
-    new_row = pd.DataFrame({'Unnamed: 1':'Guest', 'Unnamed: 3': 'Res. ID', 'Unnamed: 7':'Date Out', 'Unnamed: 12': 'Room'}, index=[0])
+    new_row = pd.DataFrame({'Unnamed: 1':'Guest', 'Unnamed: 3': 'Res. ID', 'Unnamed: 7':'Date Out','Unnamed: 10': 'Rate', 'Unnamed: 12': 'Room'}, index=[0])
     df3 = pd.concat([new_row,df2.loc[:]]).reset_index(drop=True)
 
     # Create CSV data file for us to work with for the final product
@@ -76,17 +78,23 @@ def myData(myFile):
     with open(myFile) as f: # Open CSV file
             reader = csv.reader(f)  # Read CSV File
             names, resIDs, dateOuts, rooms = [], [], [], []  # retrieve nights, rooms, names
-            duplicates = 0
+
             for row in reader:
                 try:
-                    name = row[0]
-                    resId = int(row[1])
-                    dateOut = row[2]
-                    room = int(row[3])
-                    names.append(name)
-                    resIDs.append(resId)
-                    dateOuts.append(dateOut)
-                    rooms.append(room)
+                    if "WUERFEL" in row[0]:
+                        pass
+                    else:
+                        name = row[0]
+                        resId = int(row[1])
+                        dateOut = row[2]
+                        if int(row[3]) < 5:
+                            room = int(row[4])
+                        else:
+                            room = int(row[3])
+                        names.append(name)
+                        resIDs.append(resId)
+                        dateOuts.append(dateOut)
+                        rooms.append(room)
                 except ValueError:
                     pass
     lastNames = myNames(names, 0)

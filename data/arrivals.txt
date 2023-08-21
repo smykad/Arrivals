@@ -1,16 +1,23 @@
+		Number of Arrivals: 16
+
 	Guest		ResID	Room	Date Out
 
-	Chakfeh		3200	300	17-Aug-2023
-	Chakfeh		3201	312	17-Aug-2023
-	Saab		2548	410	17-Aug-2023
+1	Semrick		2904	102	8/22/2023
+2	Palazzolo	3131	208	8/22/2023
+3	Schwegel	3274	304	8/22/2023
+4	Jaini		2951	307	8/22/2023
 
-	Ansari		3172	100	18-Aug-2023
-	Michael		3152	208	18-Aug-2023
-	[Mv]Gomah	3196	310	18-Aug-2023
-	Powell		2721	402	18-Aug-2023
-	Lenehan		2719	404	18-Aug-2023
-	Barcikoski	3187	412	18-Aug-2023
+5	Arnous		3197	112	8/23/2023
+6	Arnous		3198	200	8/23/2023
+7	Hulett		2976	212	8/23/2023
+8	Morinaga	3190	300	8/23/2023
+9	Wilberding	3120	310	8/23/2023
+10	Macdonald	2924	402	8/23/2023
+11	Bloch		3165	404	8/23/2023
 
-	Witte		2526	302	19-Aug-2023
+12	Christlieb	2922	308	8/24/2023
+13	Blazer		3015	410	8/24/2023
 
-	Ackley		2091	210	20-Aug-2023
+14	Lawless		2701	406	8/25/2023
+15	Christianson	2927	202	8/25/2023
+16	Sedlacek	2406	306	8/25/2023
